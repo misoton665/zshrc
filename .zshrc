@@ -1,9 +1,9 @@
-export ANDROID_HOME=/usr/local/opt/android-sdk-macosx
-export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
-export PATH=$PATH:/usr/local/opt/hello
-export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.7.0_60.jdk/Contents/Home'
-export ANDROID_SDK_HOME=$ANDROID_HOME
-export ANDROID_SDK=$ANDROID_HOME
+#export ANDROID_HOME=/usr/local/opt/android-sdk-macosx
+#export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+#export PATH=$PATH:/usr/local/opt/hello
+#export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.7.0_60.jdk/Contents/Home'
+#export ANDROID_SDK_HOME=$ANDROID_HOME
+#export ANDROID_SDK=$ANDROID_HOME
 export TERM=xterm-256color
 
 autoload -U compinit; compinit
