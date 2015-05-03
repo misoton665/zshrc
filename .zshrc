@@ -39,6 +39,9 @@ alias sftpuaizu="sftp s1220228@sshgate.u-aizu.ac.jp"
 alias sshsakuravps="ssh ad@133.242.169.211"
 alias sftpsakuravps="sftp ad@133.242.169.211"
 alias ks="echo カスはお前だ"
+alias ga="git add ."
+alias gm="git commit -m"
+alias gp="git push"
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
