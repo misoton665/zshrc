@@ -1,9 +1,9 @@
-#export ANDROID_HOME=/usr/local/opt/android-sdk-macosx
-#export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
-#export PATH=$PATH:/usr/local/opt/hello
-#export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.7.0_60.jdk/Contents/Home'
-#export ANDROID_SDK_HOME=$ANDROID_HOME
-#export ANDROID_SDK=$ANDROID_HOME
+export ANDROID_HOME=/usr/local/opt/android-sdk-macosx
+export PATH=$PATH:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
+export PATH=$PATH:/usr/local/opt/hello
+export JAVA_HOME='/Library/Java/JavaVirtualMachines/jdk1.7.0_60.jdk/Contents/Home'
+export ANDROID_SDK_HOME=$ANDROID_HOME
+export ANDROID_SDK=$ANDROID_HOME
 export TERM=xterm-256color
 
 autoload -U compinit; compinit
@@ -28,7 +28,7 @@ function vcs_echo {
     fi
     echo "%{$color%}(%{$branch%})%{$reset_color%}" | sed -e s/@/"%F{yellow}@%f%{$color%}"/
 }
-PROMPT='%F{yello}[%~]%f `vcs_echo`
+PROMPT='%m%F{yello}[%~]%f `vcs_echo`
 %(?.$.%F{red}$%f) '
 
 alias php="php -S localhost:33333"
@@ -36,8 +36,7 @@ alias ls="ls -af"
 alias sshuaizux="ssh -X s1220228@sshgate.u-aizu.ac.jp"
 alias sshuaizu="ssh s1220228@sshgate.u-aizu.ac.jp"
 alias sftpuaizu="sftp s1220228@sshgate.u-aizu.ac.jp"
-alias sshsakuravps="ssh ad@133.242.169.211"
-alias sftpsakuravps="sftp ad@133.242.169.211"
+alias sshsakura="ssh admin@27.133.130.191"
 alias ks="echo カスはお前だ"
 alias ga="git add ."
 alias gm="git commit -m"
@@ -54,11 +53,12 @@ export PATH="/usr/local/heroku/bin:$PATH"
 # 環境変数
 export LANG=ja_JP.UTF-8
 
+
 # 色を使用出来るようにする
 autoload -Uz colors
 colors
 
-# vim 風キーバインドにする
+# emacs 風キーバインドにする
 bindkey -v
 
 # ヒストリの設定
@@ -104,7 +104,7 @@ zstyle ':vcs_info:*' actionformats '%F{red}(%s)-[%b|%a]%f'
 
 function _update_vcs_info_msg() {
     LANG=en_US.UTF-8 vcs_info
-    RPROMPT="${vcs_info_msg_0_}"
+#    RPROMPT="${vcs_info_msg_0_}"
 }
 add-zsh-hook precmd _update_vcs_info_msg
 
